@@ -1,0 +1,40 @@
+body{
+    background-color: #ffe600
+}
+
+.rojo{
+    color: #ff0000;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.linea{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    background-color: aqua;
+    transition: all 1s linear;
+}
+
+.linea:hover{
+    background-color: red;
+    transition: all 1s linear;
+}
+
+html{
+    font-size: 15px;
+}
+.pixel{
+    font-size: 15px;
+}
+.el-em{
+    font-size: 2em;
+}
+.el-rem{
+    font-size: 2rem;
+}
