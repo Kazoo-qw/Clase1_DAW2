@@ -8,7 +8,7 @@ console.log( `Hello world ${ 5 +2 } ` );
 
 var arregloUno =[ 5,8,7, "Jesus" , true ]
 let arrgloDos = [ 6, 9, 8, 3 ]
-const temporal = 5
+const num = 5
 console.log ( arregloUno ) ;
 console.log ( arrgloDos )
 console.log ( arregloUno[3] )
@@ -188,3 +188,132 @@ let filtro = numeross.filter(function(data){
     return data % 2 == 0
 })
 console.log("Resultado Filtro", filtro)
+
+console.log("Hola Mundo");
+//Funcion Declarativa
+saludo();
+function saludo() {
+    console.log("Hola Mundo");
+}
+//Funcion Constante 
+const saludoDos = function() {
+    console.log("Saludo Dos")
+}
+saludoDos();
+//Tercera forma de funcion
+const saludoTres = () => {
+    console.log("Saludo Tres")
+}
+saludoTres();
+
+const bienvenida = ( nombre , apellido1  ) => {
+    return "Bienvenido" + nombre &[apellido1];
+}
+
+let temporal = bienvenida('jesus' , 'Sanchez');
+let temporal2 = bienvenida('david' , 'Abril');
+console.log (temporal);
+console.log (temporal2);
+ 
+
+/**
+ * Crear una funcion que reciba tres parametros llamados, nombre, apellido uno,
+ * apellido dos en caso tal de que no contenga el apellido dos devolver : "No se
+ * puede dar la bienvenida" si los datos estan completos devolver la funcion.
+ */
+
+const nombreCompleto = (nombre , apellido1, apeliido2) => {
+    if (apeliido2 == undefined){
+        return "No se puede dar la bienvenida"
+    }
+    return "Bienvenido" + nombreCompleto
+}
+console.log(nombreCompleto)
+
+/**
+ * Crear una funcion , que sume 3 números si el tercer numero no se envia dicho numero
+ * se debe reeplazar por "5"
+ */
+
+const sumar = (a, b, c = 5) => {
+    return a + b + c ;
+}
+console.log( sumar(1 , 2, 3));
+
+/**
+ * Crear una funcion, que sume 3 numeros y retorne el primer numero, el segundo numero
+ * el tercer numero y la suma de todos ellos.
+ */
+
+const sumar_dos = (a , b , c) => {
+    return [ a, b, c, a + b + c ];
+}
+console.log (sumar_dos(1,2,3))
+
+/**
+ * Crear una funcion que reciba dos numeros y devueval la suma, la resta, la multiplicacion y
+ *  la division de los 2 numeros
+ */
+
+const sumar_tres = (a, b) => [a+b, a-b, a*b, a/b];
+console.log(sumar_tres(10, 5));
+
+//Con map
+const recibaNumero = (a, b) => {
+let map1 = {a, b, 'suma':a + b }
+return map1
+}
+console.log(recibaNumero(10,5));
+
+/**
+ * Crear una funcion que reciba dos valores,
+ * se debe devolver, el primer valor, el segundo valor y la suma
+ * luego de ello, multiplicar el primer valor por el resultado de la suma
+ */
+
+const sumarMap = (a, b) => {
+let map2 = {a, b, suma: a + b }
+return map2;
+}
+let res1 = sumarMap(10,5);
+console.log(res1.a * res1.suma)
+
+
+//Formas de Map
+const multiplicacion1 = (parametros) => {
+    console.log(parametros);
+    let multi = parametros.a * parametros.b;
+    console.log(multi);
+}
+multiplicacion1 ( {a: 5, b:6} );
+
+const multiplicacion2 = (parametros) => {
+    let {a,b} = parametros;
+    let multi = a * b;
+    console.log(multi);
+}
+multiplicacion2 ( {a: 6, b:6} );
+
+const multiplicacion3 = ( {a, b, c = 9} ) => {
+    let multi = a * b;
+    console.log(multi);
+    console.log(a,b,c);
+}
+multiplicacion3 ( {a: 4, b:6} );
+
+const multiplicacion4 = ( {a, b, c = 9} ) => {
+    let multi = a * b * c;
+    return multi;
+}
+console.log(multiplicacion4 ( {a: 4, b:6} ) );
+
+const multiplicacion5 = ( {a, b, c = 9} ) => a * b * c
+console.log(multiplicacion5 ( {a: 4, b:6} ) );
+
+/**
+ * Crear una funcion que reciba un nombre y una edad, si la edad es menor a 18 devuelva
+ * no puede entrar, si es mayor o igual devuelva Bienvenido "Nombre"
+ */
+
+const restringir = (nombre, edad) => (edad < 18) ? "No puede entrar": "Bienvenido " + nombre
+console.log(restringir("Jesus", 20))
