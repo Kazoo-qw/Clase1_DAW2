@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>¡¡¡Welcome!!!</h1>
+    
+    <p>Cantidad de clicks <spam id="numero">0</spam></p>
+    <button type="button" id="boton" >click +</button>
+    <button type="button" id="boton2" >click -</button>
+    <div>
+        <form id="formulario">
+            <div>
+                <label for="numero_uno">Numero Uno</label>
+                <input type="number" id="numero_uno" name="numero_uno" />
+            </div>
+            <div>
+                <label for="numero_dos">Numero Dos</label>
+                <input type="number" id="numero_dos" name="numero_dos"/>
+            </div>
+            <div>
+                <button type="submit">sumar</button>
+            </div>
+            <div>
+                <p>El resultado es: <spam id="res" ></spam></p>
+            </div>
+        </form>
+
+        <form id="form-person">
+            <div class="container-input">
+                <label for="nombre">Nombre</label>
+                <input type="number" id="numero_uno" name="numero_uno" />
+            </div>
+            <div class="container-input">
+                <label for="apellido">Apllido</label>
+                <input id="apellido" name="apellido" required/>
+            </div>
+            <div class="container-input">
+                <label for="edad">Edad</label>
+                <input id="edad" name="edad" type="number" required/>
+                <spam class = "negativo" id = "edad-error"></spam>
+            </div>
+            <div>
+                <button type="submit">Guardar</button>
+            </div>
+        </form>
+
+        <div>
+            <h2>Datos Guardados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-result"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="./temporal.js"></script>
+</body>
+</html>
